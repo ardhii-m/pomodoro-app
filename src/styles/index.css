@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import "tailwindcss";
+
+
+/* :root {
+  color: black;
+  background-color: #ffffff;
+}
+
+
+
+/* .pomodoro-timer {
+  border: 3px solid;
+  display: flex;
+  flex-direction: column;
+} */
+
+* {
+  @apply p-0 m-0 box-border;
+}
+
+body {
+  font-family: 'Sora', 'Poppins', Inter, system-ui, Helvetica, sans-serif;
+}
