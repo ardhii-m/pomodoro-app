@@ -1,12 +1,11 @@
 import CountdownTimer from "./components/timers/CountdownTimer"
 
-
 function App() {
   return (
     <>
-      <div className="bg-white">
+      <div className="bg-[#FF6B6B] h-screen w-screen">
         {/* Pomodoro Timer */}
-        <h1 className="text-center text-6xl font-bold p-8">Pomodoro Timer</h1>
+        <h1 className="text-center text-4xl sm:text-5xl font-bold p-8">Pomodoro Timer</h1>
         <CountdownTimer />
         {/* Task List */}
       </div>
@@ -14,4 +13,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

@@ -16,10 +16,6 @@
   flex-direction: column;
 } */
 
-* {
-  @apply p-0 m-0 box-border;
-}
-
 body {
   font-family: 'Sora', 'Poppins', Inter, system-ui, Helvetica, sans-serif;
 }
