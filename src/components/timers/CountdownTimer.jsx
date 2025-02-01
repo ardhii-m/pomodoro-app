@@ -49,7 +49,7 @@ function CountdownTimer() {
   };
 
   return (
-    <div className="bg-[#FF6B6B] flex items-center justify-center px-2">
+    <div className="bg-[#FF6B6B] flex items-center justify-center px-2 pt-8 pb-6">
       <div className="my-4 w-full max-w-max text-center bg-[#f0f0f0] shadow-xl rounded-2xl space-y-4 border-1 p-4 mx-4">
         <h1 className="pt-2 text-3xl sm:text-4xl font-bold">
           {mode === "work" ? "Work Time" : "Rest Time"}
