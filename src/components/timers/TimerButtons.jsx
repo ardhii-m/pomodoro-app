@@ -21,7 +21,7 @@ function TimerButtons({ isRunning, toggleTimer, resetTimer, switchMode }) {
       </button>
       <button 
         onClick={switchMode}
-        className="p-2 sm:p-4 text-xl sm:text-3xl cursor-pointer border-2 rounded-xl sm:rounder-2xl transition-colors duration-300 bg-red-400 hover:bg-red-500">
+        className="p-2 sm:p-4 text-xl sm:text-3xl cursor-pointer border-2 rounded-xl sm:rounder-2xl transition-colors duration-300 bg-white hover:bg-gray-300">
         Switch
       </button>
     </div>

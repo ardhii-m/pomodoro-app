@@ -49,14 +49,18 @@ function CountdownTimer() {
   };
 
   return (
-    <div className="flex items-center justify-center px-2">
-      <div className="w-full max-w-max text-center bg-[#f0f0f0] shadow-xl rounded-2xl space-y-4 border-1 p-4 mx-4">
+    <div className="bg-[#FF6B6B] flex items-center justify-center px-2">
+      <div className="my-4 w-full max-w-max text-center bg-[#f0f0f0] shadow-xl rounded-2xl space-y-4 border-1 p-4 mx-4">
         <h1 className="pt-2 text-3xl sm:text-4xl font-bold">
           {mode === "work" ? "Work Time" : "Rest Time"}
         </h1>
+        {/* Timer Display */}
         <div className="text-7xl sm:text-8xl font-mono">
           {formatTime(time)}
         </div>
+        {/* Phase counter (Work -> Break -> Work -> */}
+
+        {/* Buttons */}
         <TimerButtons 
           isRunning={isRunning}
           toggleTimer={toggleTimer}
