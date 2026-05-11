@@ -1,13 +1,15 @@
 import React from "react";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import TimerButtons from "./TimerButtons";
+import ThemeContext from "../../contexts/ThemeContext.jsx";
 
 function CountdownTimer() {
   const workTime = 25 * 60;
   const breakTime = 5 * 60;
+  const longBreakTime = 30 * 60;
   const [time, setTime] = React.useState(workTime);
   const [isRunning, setIsRunning] = React.useState(false);
-  const [mode, setMode] = React.useState("work");
+  const { mode, setMode } = React.useContext(ThemeContext);
   const [timerKey, setTimerKey] = React.useState(0);
 
 
@@ -54,11 +56,11 @@ function CountdownTimer() {
   };
 
   return (
-    <div className={`flex items-center justify-center px-2 pt-8 pb-6 transition-colors duration-200`}>
+    <div className='flex items-center justify-center px-2 pt-8 pb-6 transition-colors duration-200'>
       <div className="flex flex-col items-center my-4 w-full max-w-max text-center bg-[#f0f0f0] shadow-2xl rounded-2xl space-y-4 p-4 mx-4">
-        <h1 className="pt-2 text-3xl sm:text-4xl font-bold">
+        <h2 className="pt-2 text-3xl sm:text-4xl font-bold">
           {mode === "work" ? "Work Time" : "Rest Time"}
-        </h1>
+        </h2>
 
         {/* Timer Display */}
         <div className="py-4">
