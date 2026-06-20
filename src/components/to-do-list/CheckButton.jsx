@@ -6,8 +6,9 @@ function CheckButton({ id, onCheck, checked }) {
     <button
       onClick={() => onCheck(id)}
       className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-colors ${
-        checked ? "bg-[#FF6B6B] border-[#FF6B6B] text-white" : "border-gray-300 text-transparent"
+        checked ? "bg-gray-700 border-gray-800 text-white" : "border-gray-300 text-transparent"
       }`}
+      title={`${checked ? "Uncheck Task" :  "Check Task"}`}
     >
       <BiCheck size={20} />
     </button>
