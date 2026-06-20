@@ -6,7 +6,7 @@ import ThemeContext from "../../contexts/ThemeContext.jsx";
 function CountdownTimer() {
   const workTime = 25 * 60;
   const breakTime = 5 * 60;
-  const longBreakTime = 30 * 60;
+  // const longBreakTime = 30 * 60;
   const [time, setTime] = React.useState(workTime);
   const [isRunning, setIsRunning] = React.useState(false);
   const { mode, setMode } = React.useContext(ThemeContext);
@@ -56,18 +56,18 @@ function CountdownTimer() {
   };
 
   return (
-    <div className='flex items-center justify-center px-2 pt-8 pb-6 transition-colors duration-200'>
-      <div className="flex flex-col items-center my-4 w-full max-w-max text-center bg-[#f0f0f0] shadow-2xl rounded-2xl space-y-4 p-4 mx-4">
-        <h2 className="pt-2 text-3xl sm:text-4xl font-bold">
+    <div className="flex justify-center px-4 pb-8">
+      <div className="flex flex-col items-center my-4 w-full max-w-sm text-center bg-[#f0f0f0] shadow-2xl rounded-2xl space-y-4 p-4 mx-4">
+        <h2 className="text-center text-3xl sm:text-4xl font-bold">
           {mode === "work" ? "Work Time" : "Rest Time"}
         </h2>
-
+  
         {/* Timer Display */}
         <div className="py-4">
           <CountdownCircleTimer
             key={timerKey}
             isPlaying={isRunning}
-            duration={mode === 'work' ? 25 * 60 : 5 * 60}
+            duration={mode === 'work' ? workTime : breakTime}
             initialRemainingTime={time}
             colors={mode === 'work' ? "#FF6B6B" : "#38858A"}
             trailColor="#d3d3d3"
@@ -77,14 +77,12 @@ function CountdownTimer() {
             {({ remainingTime }) => <span className="text-5xl font-mono">{formatTime(remainingTime)}</span>}
           </CountdownCircleTimer>
         </div>
-
-        {/* Phase counter (Work -> Break -> Work -> */}
-
+  
         {/* Buttons */}
-        <TimerButtons 
+        <TimerButtons
+          mode={mode}
           isRunning={isRunning}
           toggleTimer={toggleTimer}
-          resetTimer={resetTimer}
           switchMode={switchMode}
         />
       </div>
