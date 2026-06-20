@@ -1,25 +1,25 @@
 import PropTypes from "prop-types";
-function TimerButtons({ isRunning, toggleTimer, resetTimer, switchMode }) {
+
+function TimerButtons({ mode, isRunning, toggleTimer, switchMode }) {
+  const isWork = mode === "work";
+
   return (
-    <div className="flex justify-center space-x-3 px-6 w-full">
-      <button
-        onClick={resetTimer}
-        title="Reset timer"
-        className="p-2 sm:p-4 text-xl sm:text-3xl cursor-pointer border-2 rounded-xl sm:rounder-2xl transition-colors duration-300 bg-red-400 hover:bg-red-500"
-      >
-        Reset
-      </button>
+    <div className="flex justify-center space-x-3 px-6 w-full text-2xl">
       <button
         onClick={toggleTimer}
-        className={`p-2 sm:p-4 text-xl sm:text-3xl cursor-pointer border-2 rounded-xl sm:rounder-2xl transition-colors duration-300 bg-white hover:bg-gray-300`}
         title={`${isRunning ? "Pause" : "Start"} timer`}
+        className={`text-white px-6 py-4 rounded-xl font-semibold transition-colors duration-200 cursor-pointer ${
+          isWork
+            ? "bg-[#FF6B6B] hover:bg-[#e05555]"
+            : "bg-[#38858A] hover:bg-[#2d6d71]"
+        }`}
       >
-        {isRunning === true ? "Pause" : "Start"}
+        {isRunning ? "Pause" : "Start"}
       </button>
       <button
-        title={`Switch to ${isRunning ? "Rest" : "Work"} mode`}
         onClick={switchMode}
-        className="p-2 sm:p-4 text-xl sm:text-3xl cursor-pointer border-2 rounded-xl sm:rounder-2xl transition-colors duration-300 bg-white hover:bg-gray-300"
+        title={`Switch to ${isWork ? "Rest" : "Work"} mode`}
+        className="px-4 py-4 rounded-xl font-semibold bg-gray-200 text-gray-600 hover:bg-gray-300 transition-colors cursor-pointer"
       >
         Switch
       </button>
@@ -28,9 +28,9 @@ function TimerButtons({ isRunning, toggleTimer, resetTimer, switchMode }) {
 }
 
 TimerButtons.propTypes = {
+  mode: PropTypes.string.isRequired,
   isRunning: PropTypes.bool.isRequired,
   toggleTimer: PropTypes.func.isRequired,
-  resetTimer: PropTypes.func.isRequired,
   switchMode: PropTypes.func.isRequired,
 };
 
