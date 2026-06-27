@@ -7,8 +7,10 @@ Framework used:
 - Vite
 - Tailwind CSS
 
-Simple Pomodoro App with features :
+## Features
 - Timer, alternating between 25-minute and 5-minute timer.
-- Task list (To be added)
-- Music Player (To be added)
-  
+- Task list
+- Background Theme with context.
+
+## Demo
+Access the live demo [here](https://pomodoro-timer-11.netlify.app/)
