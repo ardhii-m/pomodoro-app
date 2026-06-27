@@ -1,5 +1,9 @@
 # Pomodoro App
 
+## Preview
+
+![](https://github.com/pomodoro-app/preview.gif)
+
 This Project is mainly to train my Tailwind CSS skills.
 
 Framework used: 
