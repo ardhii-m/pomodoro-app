@@ -2,7 +2,7 @@
 
 ## Preview
 
-![](https://github.com/pomodoro-app/preview.gif)
+![](https://github.com/ardhii-m/pomodoro-app/public/preview.gif)
 
 This Project is mainly to train my Tailwind CSS skills.
 
